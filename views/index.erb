@@ -1,0 +1,15 @@
+<h1>Welcome, <%= "#{@user.fname} #{@user.lname}" %> </h1>
+
+<!--  for the OG users -->
+
+<% if @user.id.to_i == 1 %>
+<h3>Hello, Mr. Douglass.</h3>
+<% elsif @user.id.to_i < 13 %>
+<h3>You're one of the first 13 users.</h3>
+<% end %>
+
+
+
+<form method='POST' action='/logout'>
+	<input type="submit" value="LOG OUT!">
+</form>
